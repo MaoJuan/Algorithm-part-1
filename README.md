@@ -18,5 +18,5 @@ The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignme
 Deque is linklist and need two linknode objects(first,last) as pointer.Randomizedqueue is array and do not need extra pointer object.
 #### 2、RandomizedQueue
 RandomizedQueue just like a data structure of bag,so the enqueue and dequeue operations all can be done at one end of the array.
-### 3、Permutation
+#### 3、Permutation
 In the specification of assignment,it needs variable n,which I think is non-essential(use n:Permutation2.java,not use n:Permutation.java).
