@@ -1,5 +1,5 @@
 # Algorithm-part-1
-## Week1-Percolation
+## Week1-Percolation(18.3.1)
 The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/percolation.html)
 ### Attention：
 #### 1、Question about backwash
@@ -11,7 +11,7 @@ If the Array size is set up as (n*n) or (n*n+1),when n equals to 1 and opensites
 #### 4、Question of exception
 About the function's parameter such as "public boolean isFull(int row,int col)",we should throw java.lang.IllegalArgumentException("..."),rather than java.lang.IndexOutOfBoundsException(). 
 
-## Week2-Deque
+## Week2-Deque(18.3.9)
 The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/queues.html)
 ### Attention:
 #### 1、Data structure 
@@ -21,7 +21,8 @@ RandomizedQueue just like a data structure of bag,so the enqueue and dequeue ope
 #### 3、Permutation
 In the specification of assignment,it needs variable n,which I think is non-essential(use n:Permutation2.java,not use n:Permutation.java).
 
-## Week4-Collinear(18.4.4)(The first time try programming by myself at the beginning of programming)
+## Week4-Collinear(18.4.4)
+(The first time try programming by myself at the beginning of programming)
 The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/collinear.html)
 ### Attention:
 #### 1、Equals()
