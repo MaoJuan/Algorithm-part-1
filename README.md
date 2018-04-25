@@ -21,7 +21,7 @@ RandomizedQueue just like a data structure of bag,so the enqueue and dequeue ope
 #### 3、Permutation
 In the specification of assignment,it needs variable n,which I think is non-essential(use n:Permutation2.java,not use n:Permutation.java).
 
-## Week4-Collinear(18.4.4)
+## Week3-Collinear(18.4.4)
 (The first time try programming by myself at the beginning of programming)
 The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/collinear.html)
 ### Attention:
@@ -37,3 +37,16 @@ When we do not know the capacity of the array,we always use ArrayList to reserve
 If the points in the line is p-q-r-s,we need to add two points to ensure the longest line,that is p-s or s-p,otherwise the drawing results will make mistake.
 #### 6、Sorting method
 We can use Arrays.sort(...) to sort array or Collections.sort(Arraylist, new Comparator<...>() for sorting. 
+
+## Week4-8puzzle(18.4.25)
+The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/8puzzle.html)
+### Attention:
+#### 1、Swap()
+If you change the authority of function swap() to public in class Board,the assignment submitted system will reminder that your API is wrong,and you should alter it to private.
+#### 2、Manhattan()
+The distance of manhattan is the differentials between current position and it's right place for all the points,so we can use two arrarys to save the right position of x/y for every points,and calculate the amnhattan distance. 
+#### 3、Neighbors()
+When you swap two points to get the neighbors,you need to use swap twice to restore arrary,for you have to use the same array for four times.
+#### 4、Class of SearchNode
+We need to construct an inner class named SearchNode which conclude moves and priority to choice the minimum manhattan distance every time,construct the preSearchNode to find the previous searchnode when we need to trace the moving process in the function of solution().And there are two types of constructor,and the former is for the ancestor board and it's twin,the latter is for other searchnodes.The boolean variable isInitial is served for function isSolvable().
+#### 5、
