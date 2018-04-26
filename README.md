@@ -49,4 +49,7 @@ The distance of manhattan is the differentials between current position and it's
 When you swap two points to get the neighbors,you need to use swap twice to restore arrary,for you have to use the same array for four times.
 #### 4、Class of SearchNode
 We need to construct an inner class named SearchNode which conclude moves and priority to choice the minimum manhattan distance every time,construct the preSearchNode to find the previous searchnode when we need to trace the moving process in the function of solution().And there are two types of constructor,and the former is for the ancestor board and it's twin,the latter is for other searchnodes.The boolean variable isInitial is served for function isSolvable().
-#### 5、
+#### 5、Some extensive knowledge
+There is a general conclusion that if the parity of inversion numbers between initial grid and target grid is different,then the grid is unsolvable.But as the assignment don't give the corresponding API,we can not calculate the inversion numbers.And there is another conclusion that if we change the values of two arbitrary positions,the parity of grid will be changed,so there must be a solution between initial grid and it's twin(obtained by exchange two values of arbitrary position).So we can construct two priority queues,adding initial board and it's twin and moving together,if one reach the target and the other will be unsolvable.As an optimization,we can add two objects to the same priority queue which must be solvable.And in order to judge whther the initial board or it's twin make it solvable,we can add the flag "isInitialNode" to show whether the parity is same as the initial board.
+#### 6、Memory
+If we set priority queue to member variable,then the memory will explode.
