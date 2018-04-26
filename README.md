@@ -23,6 +23,7 @@ In the specification of assignment,it needs variable n,which I think is non-esse
 
 ## Week3-Collinear(18.4.4)
 (The first time try programming by myself at the beginning of programming)
+
 The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/collinear.html)
 ### Attention:
 #### 1、Equals()
