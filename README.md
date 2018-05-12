@@ -54,3 +54,19 @@ We need to construct an inner class named SearchNode which conclude moves and pr
 There is a general conclusion that if the parity of inversion numbers between initial grid and target grid is different,then the grid is unsolvable.But as the assignment don't give the corresponding API,we can not calculate the inversion numbers.And there is another conclusion that if we change the values of two arbitrary positions,the parity of grid will be changed,so there must be a solution between initial grid and it's twin(obtained by exchange two values of arbitrary position).So we can construct two priority queues,adding initial board and it's twin and moving together,if one reach the target and the other will be unsolvable.As an optimization,we can add two objects to the same priority queue which must be solvable.And in order to judge whther the initial board or it's twin make it solvable,we can add the flag "isInitialNode" to show whether the parity is same as the initial board.
 #### 6、Memory
 If we set priority queue to member variable,then the memory will explode.
+
+## Week5-kdtree(18.5.12)
+The specification of assignment:(http://coursera.cs.princeton.edu/algs4/assignments/kdtree.html)
+### Attention:
+#### 1、Class of Node
+In the class of KdTree,we need to declare an inner class named Node as the tree nodes,which can conclude Point2D,lchild,rchild and isVertical(boolean,use to decide whether wetalshould compare x or y of the point).And you can also conclude the rect of the node,which I use function rightRect() and leftRect() to illustrate in my code.
+#### 2、RightRect() and leftRect()
+We use rightRect() and leftRect() to illustrate the right and left subtree.If current node is vertical,left position of the line in node correspond to left subtree and vice versa.And if current node is not vertical,downside of the line illustrate the left subtree.
+#### 3、Draw()
+When we construct the function of draw(),there are two things we need pay attention.The one thing is leftRect/rightRect,for everytime you draw a line of the node,you do not always draw it through one side of original rect (rect(0,0,1,1)) to other side,because the rect is changing along with node.The second thing is we use red line to illustrate vertical nodes and blue line for horizontal nodes.
+#### 4、Insert()
+When inserting a node,we can not insert until we recurse the left and right subtree to the null node(leaf node).
+#### 5、The application of kdtree
+Range search-According to the assignment,if the rectangle does not intersect the rectangle corresponding to a node, there is no need to explore that node (or its subtrees).So we need to recurse the left and right subtree and nodes' left and right rect to find whether node is in the given rect.
+
+Nearest neighbor search-Use a point to record the nearest point,and recurse the subtree to find the nearest point.And do not forget the right subtree of the node in left subtree and vice versa.
